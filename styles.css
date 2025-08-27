@@ -41,7 +41,7 @@ ul, li {
 	flex-direction: column;
 	justify-content: start;
   gap: 3rem;
-	padding: 1rem 1rem;
+	padding: 1rem 0.5rem;
 	grid-area: sidebar;
 }
 
@@ -68,8 +68,20 @@ ul, li {
   gap: 1rem;
 }
 
-.logo > img {
+.sidebar .img {
+  height: fit-content;
+  width: 3rem;
+}
+
+.logo img {
   height: 3rem;
+}
+
+.menu .img,
+.user-options .img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .sidebar > .user-options{
@@ -109,6 +121,8 @@ ul, li {
   height: 2rem;
   border-radius: 16px;
   padding: 0 16px;
+  border: none;
+  background-color: aliceblue;
 }
 
 .header > .search-profile > div:first-child {
@@ -166,8 +180,26 @@ ul, li {
   border-left: 12px solid black ;
 }
 
+.projects img[src$="webp"] {
+  margin-top: 0.5rem;
+  width: 100%;
+  height: clamp(120px, 25vh, 200px);
+  object-fit: cover;
+  object-position: top;
+  border: 1px solid black;
+  border-radius: 5%;
+}
+
+.projects img[alt="odin-recipes"] {
+  object-position: top left;
+}
+
+img[alt="star-plus-outline"] {
+  margin-left: auto;
+}
+
 .projects > div > div {
-  margin-top: 2rem;
+  margin-top: 1.5rem;
   display: flex;
   flex-direction: row;
   justify-content: end;
